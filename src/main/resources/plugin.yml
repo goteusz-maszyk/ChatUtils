@@ -1,0 +1,26 @@
+name: ChatUtils
+version: '${project.version}'
+main: org.gotitim.chatutils.Main
+api-version: 1.13
+softdepend: [ Vault ]
+authors: [ gotitim ]
+description: Customize your server chat messages!
+permissions:
+  ccm.nick:
+    default: true
+    description: Ability to use /nick command (if not disabled)
+  ccm.msg:
+    default: true
+    description: Ability to use /msg
+  ccm.bypass_banword:
+    default: false
+    description: Players with this permission aren't chcked if they used banned word
+commands:
+  ccm:
+    description: Main ccm command
+  msg:
+    description: A customizable version of /msg
+    aliases:
+      - whisper
+      - dm
+    permission: ccm.msg
