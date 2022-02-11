@@ -16,8 +16,11 @@ permissions:
     default: false
     description: Players with this permission aren't chcked if they used banned word
 commands:
-  ccm:
-    description: Main ccm command
+  cu:
+    description: Main ChatUtils command
+    aliases:
+      - chatutils
+      - chat
   msg:
     description: A customizable version of /msg
     aliases:

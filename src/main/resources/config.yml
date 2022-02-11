@@ -1,7 +1,7 @@
 join_message: "&e%player% joined the game"
 leave_message: "&e%player% left the game"
 chat_message: "<%player%> %message%"
-direct_message: "[%sender% » %target%] %message%"
+direct_message: "&2[%sender% » %target%] &r%message%"
 console_nick: "Server" # name used when console uses /msg
 nick_command: true # should plugin register /nick command?
 banned_words: # messages that contain these words will fail to send

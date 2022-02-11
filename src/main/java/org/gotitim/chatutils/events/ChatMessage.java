@@ -28,6 +28,8 @@ public class ChatMessage implements Listener {
                 if (message.contains(word)) e.setCancelled(true);
             }
         }
+        if(!p.hasPermission("ccm.bypass_chatlock") && Main.chatLocked) e.setCancelled(true);
+
         e.setFormat(Objects.requireNonNull(plugin.getConfig().getString("chat_message"))
                 .replace("&", "§")
                 .replace("%player%", p.getDisplayName())
