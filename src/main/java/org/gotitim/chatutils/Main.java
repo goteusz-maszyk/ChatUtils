@@ -19,6 +19,7 @@ public final class Main extends JavaPlugin {
         manager.registerEvents(new PlayerLeave(this), this);
         manager.registerEvents(new ChatMessage(this), this);
         getCommand("cu").setExecutor(new CUCommand());
+        getCommand("cu").setTabCompleter(new CUCommandCompleter());
         getCommand("msg").setExecutor(new MsgCommand());
 
         saveDefaultConfig();

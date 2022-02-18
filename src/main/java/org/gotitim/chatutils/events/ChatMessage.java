@@ -21,14 +21,18 @@ public class ChatMessage implements Listener {
         String message = e.getMessage();
         Player p = e.getPlayer();
 
-        if(!p.hasPermission("ccm.bypass_banword")) {
+        if(!p.hasPermission("cu.bypass_banword")) {
             List<String> banned_words = plugin.getConfig().getStringList("banned_words");
 
             for (String word : banned_words) {
                 if (message.contains(word)) e.setCancelled(true);
+                return;
             }
         }
-        if(!p.hasPermission("ccm.bypass_chatlock") && Main.chatLocked) e.setCancelled(true);
+        if(!p.hasPermission("cu.bypass_chatlock") && Main.chatLocked) {
+            e.setCancelled(true);
+            return;
+        }
 
         e.setFormat(Objects.requireNonNull(plugin.getConfig().getString("chat_message"))
                 .replace("&", "§")

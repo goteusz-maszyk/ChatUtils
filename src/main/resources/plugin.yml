@@ -6,15 +6,18 @@ softdepend: [ Vault ]
 authors: [ gotitim ]
 description: Customize your server chat messages!
 permissions:
-  ccm.nick:
+  cu.nick:
     default: true
     description: Ability to use /nick command (if not disabled)
-  ccm.msg:
+  cu.msg:
     default: true
     description: Ability to use /msg
-  ccm.bypass_banword:
-    default: false
+  cu.bypass_banword:
+    default: op
     description: Players with this permission aren't chcked if they used banned word
+  cu.bypass_chatlock:
+    default: op
+    description: Players with this permission can bypass chat lock
 commands:
   cu:
     description: Main ChatUtils command
